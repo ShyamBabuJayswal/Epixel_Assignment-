@@ -1,0 +1,664 @@
+Here’s the code with the comments removed:
+
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background-color: white;
+    position: relative;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left img {
+    height: 3rem;
+    margin-right: 1rem;
+}
+
+.nav-middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;  
+}
+
+.nav-middle a {
+    margin: 0 1rem;
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 550;
+}
+
+.nav-middle a:hover {
+    color: #f0a500;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-right a {
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+}
+
+.nav-right a:first-child {
+    color: blue;
+}
+
+.nav-right a:last-child {
+    background-color: blue;
+    color: white;
+    border-radius: 0.5rem;
+}
+
+.nav-right a:last-child:hover {
+    background-color: #0056b3;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav-middle {
+        display: none;
+        width: 100%;
+    }
+
+    .nav-right {
+        justify-content: flex-end;
+    }
+
+    .hamburger {
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+    }
+
+    .nav-left img {
+        height: 2.5rem;
+    }
+
+    .nav-middle a {
+        font-size: 0.9rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .nav-right a {
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-middle a {
+        font-size: 0.8rem;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 70vh;
+    }
+
+    .hero img {
+        height: 60%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 50vh;
+    }
+
+    .hero img {
+        height: 50%;
+    }
+}
+
+.features {
+    display: flex;
+    justify-content: flex-start;
+    height: 100vh;
+    width: 100vw;
+    padding-left: 2rem;
+    margin-top: -10vh;
+}
+
+.text-container {
+    width: 50vw;
+}
+
+.text-container h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+    .text-container h1 {
+        font-size: 2rem;
+    }
+
+    .text-container {
+        width: 60vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .text-container {
+        width: 80vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .text-container {
+        width: 80vw;
+        padding-left: 1rem;
+    }
+}
+
+.grid-section {
+    margin-top: -80vh;
+    padding: 1rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+}
+
+.grid-item {
+    background-color: white;
+    padding: 2rem;
+    text-align: left;
+}
+
+.grid-item h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.grid-item p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.learn-more {
+    padding: 0.75rem 1.5rem;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.learn-more:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-section {
+        padding: 1rem;
+    }
+}
+
+.social-media-section {
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.heading-container {
+    margin: 0 auto;
+    max-width: 800px;
+    font-weight: 700;
+    color: black;
+}
+
+.subheading-container {
+    margin: 0 auto;
+    max-width: 1000px;
+    font-size: 60px;
+    text-align: center;
+    color: black;
+}
+
+.social-media-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.social-media-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.left-content {
+    flex: 1;
+    margin-right: 3rem;
+    margin-top: 7rem;
+    padding: 2rem;
+    min-width: 250px;
+}
+
+.left-item {
+    margin-bottom: 1.5rem;
+}
+
+.left-item h4 {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    color: #333;
+}
+
+.left-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.right-content {
+    flex: 0 0 40%;
+    text-align: left;
+    min-width: 300px;
+}
+
+.right-content img {
+    width: 75vh;
+    height: 80vh;
+    max-height: 800px;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+}
+
+.right-content p {
+    font-size: 1rem;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+    }
+
+    .left-content {
+        margin-right: 0;
+    }
+
+    .right-content {
+        margin-top: 2rem;
+        flex-basis: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-media-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .social-media-section h3 {
+        font-size: 1.2rem;
+    }
+
+    .left-item h4 {
+        font-size: 1.1rem;
+    }
+
+    .right-content img {
+        max-height: 300px;
+    }
+}
+
+
+/* Section Styling */
+.photo-enhancement-section {
+    padding: 1.875rem;
+    text-align: center;
+}
+
+/* Heading Styles */
+.enhancement-heading h2 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1.25rem;
+}
+
+/* Subheading Styles */
+.enhancement-subheading h3 {
+    font-size: 1.5rem;
+    color: gray;
+    font-weight: 400;
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+/* Grid Container */
+.enhancement-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.25rem;
+    margin-top: 1.875rem;
+}
+
+/* Individual Grid Items */
+.enhancement-grid-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid gray;
+}
+
+/* Image Styles */
+.enhancement-grid-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 0.625rem;
+}
+
+/* Grid Item Heading */
+.enhancement-grid-item h4 {
+    font-size: 1rem;
+    margin-bottom: 0.3125rem;
+    color: #333;
+}
+
+/* Grid Item Text */
+.enhancement-grid-item p {
+    font-size: 0.625rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 48rem) {
+    .enhancement-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Signup Section */
+.signup-section {
+    padding: 3rem;
+    margin-top: 50px;
+    text-align: center;
+}
+
+/* Heading and Subheading Styles */
+.signup-heading-container {
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.signup-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.signup-subheading-container {
+    margin-bottom: 2rem;
+}
+
+.signup-subheading {
+    font-size: 1.25rem;
+    color: gray;
+    font-weight: 400;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Signup Box */
+.signup-box {
+    width: 50%;
+    margin: 0 auto;
+    padding: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signup-box-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+/* Form Styles */
+.name-fields,
+.contact-fields {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.name-fields .form-group,
+.contact-fields .form-group {
+    flex: 1;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Register Button */
+.register-btn {
+    width: 30%;
+    padding: 0.75rem;
+    font-size: 1.25rem;
+    background-color: rgb(62, 62, 223);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: -23rem;
+}
+
+.register-btn:hover {
+    background-color: blue;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .signup-box {
+        width: 90%;
+    }
+
+    .name-fields,
+    .contact-fields {
+        flex-direction: column;
+    }
+    
+    .register-btn {
+        width: 30%;
+        padding: 0.75rem;
+        font-size: 1.25rem;
+        background-color: rgb(62, 62, 223);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-left: -16rem;
+    }
+}
+
+/* Footer Section */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 2rem 1rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 50px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    margin-left: 100px;
+}
+
+.footer-column {
+    flex: 1;
+}
+
+.footer-column h4 {
+    margin-bottom: 15px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-buttons {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+}
+
+.footer-buttons button {
+    margin: 2rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.register-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.login-button {
+    background-color: #008CBA;
+    color: white;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: white;
+    margin: 1rem 0;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    margin-left: 30px;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    margin-right: 100px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    margin-left: 0.5rem;
+}
